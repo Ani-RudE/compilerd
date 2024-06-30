@@ -63,16 +63,19 @@ const Body = () => {
                               onChange={handleLanguageChange}
                               className="mb-2 p-2 bg-gray-800 text-white border border-gray-600 rounded-md"
                          >
-                              <option value="nodejs">JavaScript</option>
                               <option value="c">C</option>
                               <option value="cpp">C++</option>
+                              <option value="csharp">C#</option>
                               <option value="python">Python</option>
                               <option value="java">Java</option>
+                              <option value="nodejs">JavaScript</option>
                               <option value="ruby">Ruby</option>
                               <option value="promptv1">PromptV1</option>
                               <option value="promptv2">PromptV2</option>
                               <option value="multifile">Multifile</option>
                               <option value="sqlite3">SQLite3</option>
+                              <option value="r">R</option>
+                              <option value="perl">Perl</option>
                          </select>
                     </div>
                     <textarea
