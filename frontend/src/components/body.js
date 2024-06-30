@@ -26,15 +26,6 @@ const Body = () => {
           }
      };
 
-     // const runCode = () => {
-     //      const payload = {
-     //           language,
-     //           script: code
-     //      };
-     //      console.log(payload);
-     //      setOutput(''); // Clear the output since we're not running the code
-     // };
-
      const runCode = async () => {
           const payload = {
                language,
@@ -72,11 +63,16 @@ const Body = () => {
                               onChange={handleLanguageChange}
                               className="mb-2 p-2 bg-gray-800 text-white border border-gray-600 rounded-md"
                          >
+                              <option value="nodejs">JavaScript</option>
+                              <option value="c">C</option>
                               <option value="cpp">C++</option>
-                              <option value="ruby">Python</option>
+                              <option value="python">Python</option>
                               <option value="java">Java</option>
-                              <option value="nodejs">Node.js</option>
                               <option value="ruby">Ruby</option>
+                              <option value="promptv1'">PromptV1</option>
+                              <option value="promptv1'">PromptV1</option>
+                              <option value="multifile">Multifile</option>
+                              <option value="sqlite3">SQLite3</option>
                          </select>
                     </div>
                     <textarea
