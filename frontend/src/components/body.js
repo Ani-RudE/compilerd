@@ -36,7 +36,7 @@ const Body = () => {
 
           try {
                const response = await axios.post('http://localhost:3000/api/execute/', payload);
-               if (response.data.error === 0) {
+               if (response.data.error == 0) {
                     // console.log(response.data.output);
                     console.log(response.data);
                     setOutput(response.data.output);
@@ -55,15 +55,13 @@ const Body = () => {
      };
 
      return (
-          <div className="flex flex-col items-center w-full max-w-6xl mt-8 px-4">
+          <div className="flex flex-col items-center w-full max-w-6xl mt-8">
                <div className="flex flex-col items-start mb-4 w-full">
-                    <div className="flex justify-between w-full mb-2">
-                         <label htmlFor="language" className="text-white font-medium mr-2">Language:</label>
+                    <div className="flex justify-between w-full">
                          <select
-                              id="language"
                               value={language}
                               onChange={handleLanguageChange}
-                              className="p-2 bg-gray-700 text-white border border-gray-600 rounded-md"
+                              className="mb-2 p-2 bg-gray-800 text-white border border-gray-600 rounded-md"
                          >
                               <option value="nodejs">JavaScript</option>
                               <option value="c">C</option>
@@ -72,6 +70,7 @@ const Body = () => {
                               <option value="java">Java</option>
                               <option value="ruby">Ruby</option>
                               <option value="promptv1">PromptV1</option>
+                              <option value="promptv2">PromptV2</option>
                               <option value="multifile">Multifile</option>
                               <option value="sqlite3">SQLite3</option>
                          </select>
@@ -81,18 +80,21 @@ const Body = () => {
                          onChange={handleCodeChange}
                          onKeyDown={handleKeyDown}
                          placeholder="Write your code here..."
-                         className="w-full h-40 p-4 bg-gray-800 text-white border border-gray-600 rounded-md font-mono"
+                         className="w-full h-40 p-2 bg-gray-800 text-white border border-gray-600 rounded-md font-mono"
                     />
+                    <br />
                     <button
                          onClick={runCode}
-                         className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
+                         className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                     >
                          Run Code
                     </button>
                </div>
                <div className="w-full">
-                    <h3 className="text-lg font-semibold text-white mb-2">Output:</h3>
-                    <pre className="w-full h-40 p-4 bg-gray-800 text-white border border-gray-600 rounded-md overflow-auto">
+                    <br />
+                    <h3 className="text-lg font-semibold">Output:</h3>
+                    <br />
+                    <pre className="w-full h-40 p-2 bg-gray-800 text-white border border-gray-600 rounded-md overflow-auto">
                          {output}
                     </pre>
                </div>
