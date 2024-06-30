@@ -36,7 +36,8 @@ const Body = () => {
 
           try {
                const response = await axios.post('http://localhost:3000/api/execute/', payload);
-               if (response.data.error == 0) {
+              
+               if (response.data.error === 0) {
                     // console.log(response.data.output);
                     console.log(response.data);
                     setOutput(response.data.output);
@@ -55,13 +56,13 @@ const Body = () => {
      };
 
      return (
-          <div className="flex flex-col items-center w-full max-w-6xl mt-8">
-               <div className="flex flex-col items-start mb-4 w-full">
-                    <div className="flex justify-between w-full">
+          <div className="flex flex-row items-start w-full max-w-6xl mt-8 h-[95vh] pb-4">
+               <div className="flex flex-col items-start w-2/3 h-full p-4 bg-gray-900 relative">
+                    <div className="flex justify-between w-full mb-2">
                          <select
                               value={language}
                               onChange={handleLanguageChange}
-                              className="mb-2 p-2 bg-gray-800 text-white border border-gray-600 rounded-md"
+                              className="p-2 bg-gray-800 text-white border border-gray-600 rounded-md"
                          >
                               <option value="c">C</option>
                               <option value="cpp">C++</option>
@@ -77,27 +78,24 @@ const Body = () => {
                               <option value="r">R</option>
                               <option value="perl">Perl</option>
                          </select>
+                         <button
+                              onClick={runCode}
+                              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 absolute top-0 right-0 mt-4 mr-4"
+                         >
+                              Run Code
+                         </button>
                     </div>
                     <textarea
                          value={code}
                          onChange={handleCodeChange}
                          onKeyDown={handleKeyDown}
                          placeholder="Write your code here..."
-                         className="w-full h-40 p-2 bg-gray-800 text-white border border-gray-600 rounded-md font-mono"
+                         className="w-full h-full p-2 bg-gray-800 text-white border border-gray-600 rounded-md font-mono"
                     />
-                    <br />
-                    <button
-                         onClick={runCode}
-                         className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-                    >
-                         Run Code
-                    </button>
                </div>
-               <div className="w-full">
-                    <br />
-                    <h3 className="text-lg font-semibold">Output:</h3>
-                    <br />
-                    <pre className="w-full h-40 p-2 bg-gray-800 text-white border border-gray-600 rounded-md overflow-auto">
+               <div className="flex flex-col w-1/3 h-full p-4 bg-gray-900">
+                    <h3 className="text-lg font-semibold text-white mb-2 mt-3">Output:</h3>
+                    <pre className="w-full h-full p-2 bg-gray-800 text-white border border-gray-600 rounded-md overflow-auto">
                          {output}
                     </pre>
                </div>
