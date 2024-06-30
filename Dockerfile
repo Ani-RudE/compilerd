@@ -4,6 +4,15 @@ ENV PYTHONUNBUFFERED=1
 RUN set -ex && \
     apk add --no-cache gcc g++ musl-dev python3 openjdk17 ruby iptables ip6tables
 
+#Added R
+RUN apk add --no-cache R R-dev
+
+#Added C#
+RUN apk add --no-cache mono --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing
+
+#Added Perl
+RUN apk add --no-cache perl
+
 RUN set -ex && \
     apk add --no-cache chromium lsof
 
