@@ -205,7 +205,7 @@ const Body = () => {
                          <textarea
                               value={stdin}
                               onChange={(e) => setStdin(e.target.value)}
-                              placeholder="Write Input here - Line separated..."
+                              placeholder="Write Input here - Line separate"
                               className="w-full h-1/4 p-2 bg-gray-900 text-white border border-gray-600 rounded-md font-mono"
                          />
                     </div>
