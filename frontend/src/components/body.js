@@ -115,13 +115,13 @@ const Body = () => {
      ];
 
      return (
-          <div className="flex flex-col items-center w-full h-[95vh] pb-4 bg-gray-900">
+          <div className="flex flex-col items-center w-full h-screen pb-4 bg-gray-900">
                <div className="w-full flex justify-center items-center mb-2">
-                    <h1 className="text-white font-cursive text-4xl">Compilerd</h1>
+                    <h1 className="text-white text-3xl mb-4 mt-4">Kalvium | Compilerd</h1>
                </div>
                <div className="w-full border-t border-gray-600"></div>
-               <div className="flex flex-row items-start w-full h-full">
-                    <div className="flex flex-col w-1/6 h-full p-4 border-r border-gray-600">
+               <div className="flex flex-row items-start w-full h-full overflow-hidden">
+                    <div className="flex flex-col w-1/6 h-full p-4 border-r border-gray-600 overflow-auto">
                          <button
                               onClick={addNewFile}
                               className="mb-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
@@ -168,7 +168,7 @@ const Body = () => {
                               </div>
                          )}
                     </div>
-                    <div className="flex flex-col items-start w-3/6 h-full p-4 border-r border-gray-600 bg-gray-800">
+                    <div className="flex flex-col items-start w-3/6 h-full p-4 border-r border-gray-600 bg-gray-800 overflow-auto">
                          <div className="flex justify-between w-full mb-2">
                               <Dropdown
                                    options={languageOptions}
@@ -190,7 +190,7 @@ const Body = () => {
                               className="w-full h-full p-2 bg-gray-900 text-white border border-gray-600 rounded-md font-mono"
                          />
                     </div>
-                    <div className="flex flex-col w-2/6 h-full p-4 bg-gray-800">
+                    <div className="flex flex-col w-2/6 h-full p-4 bg-gray-800 overflow-auto">
                          <h3 className="text-lg font-semibold text-white mb-2 mt-3">Output:</h3>
                          <pre className="w-full h-full p-2 bg-gray-900 text-white border border-gray-600 rounded-md overflow-auto">
                               {output}
