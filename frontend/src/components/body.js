@@ -10,6 +10,7 @@ const Body = () => {
      const [output, setOutput] = useState('');
      const [newFileName, setNewFileName] = useState('');
      const [isAddingFile, setIsAddingFile] = useState(false);
+     const [stdin, setStdin] = useState('');
      const inputRef = useRef(null);
 
      const handleCodeChange = (e) => {
@@ -39,7 +40,8 @@ const Body = () => {
      const runCode = async () => {
           const payload = {
                language: files[currentFileIndex].language,
-               script: files[currentFileIndex].content
+               script: files[currentFileIndex].content,
+               stdin: stdin
           };
           console.log(payload);
           setOutput(''); // Clear the output while waiting for the response
@@ -122,6 +124,7 @@ const Body = () => {
                <div className="w-full border-t border-gray-600"></div>
                <div className="flex flex-row items-start w-full h-full overflow-hidden">
                     <div className="flex flex-col w-1/6 h-full p-4 border-r border-gray-600 overflow-auto">
+                         <h2 className="text-white text-lg mb-2">Input</h2>
                          <button
                               onClick={addNewFile}
                               className="mb-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
@@ -192,9 +195,19 @@ const Body = () => {
                     </div>
                     <div className="flex flex-col w-2/6 h-full p-4 bg-gray-800 overflow-auto">
                          <h3 className="text-lg font-semibold text-white mb-2 mt-3">Output:</h3>
-                         <pre className="w-full h-full p-2 bg-gray-900 text-white border border-gray-600 rounded-md overflow-auto">
+                         <pre className="w-full h-3/4 p-2 bg-gray-900 text-white border border-gray-600 rounded-md overflow-auto">
                               {output}
                          </pre>
+                         <div className='flex w-full items-center mb-2'>
+                              <h3 className="text-lg font-semibold text-white mt-3">Input</h3>
+                              {/* <h5 className='text-xs mt-3 ml-2 text-gray-400'>Line seperated</h5> */}
+                         </div>
+                         <textarea
+                              value={stdin}
+                              onChange={(e) => setStdin(e.target.value)}
+                              placeholder="Write Input here - Line separated..."
+                              className="w-full h-1/4 p-2 bg-gray-900 text-white border border-gray-600 rounded-md font-mono"
+                         />
                     </div>
                </div>
           </div>
