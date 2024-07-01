@@ -7,7 +7,17 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url] -->
 
+## My Contributions :
 
+### Languages I added :
+  - C#
+  - R
+  - Perl
+
+*Note: Added 2 Test cases for each language.*
+
+### Front-end User Interface :
+* Used ReactJS and TailwindCSS to provide a User-Interface to the application.
 
 
 
@@ -36,7 +46,6 @@
     </ul>
   </li>
   <li><a href="#license">License</a></li>
-  <li><a href="#My Contributions">My Contributions</a></li>
 
 </ol>
 
@@ -140,18 +149,3 @@ For local development we should have the following dependencies set up locally i
 [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-
-
-
-
-## My Contributions :
-
-### Languages I added :
-  - C#
-  - R
-  - Perl
-
-*Note: Added 2 Test cases for each language.*
-
-### Front-end User Interface :
-* Used ReactJS and TailwindCSS to provide a User-Interface to the application.
