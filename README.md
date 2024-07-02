@@ -19,6 +19,9 @@
 ### Front-end User Interface :
 * Used ReactJS and TailwindCSS to provide a User-Interface to the application.
 
+### To run the front end refer to the following instructions:
+**[Steps to run Front-end](https://github.com/Ani-RudE/compilerd/tree/main/frontend#readme)**
+
 #
 
 
