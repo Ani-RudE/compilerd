@@ -18,10 +18,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, navigate to frontend Folder, then run:
+In the project directory, navigate to Frontend Folder:
 
 ```cmd
 cd frontend
+```
+
+Then run:
+```
+npm install
 ```
 
 ```cmd
