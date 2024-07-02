@@ -20,8 +20,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, navigate to frontend Folder, then run:
 
-```cd frontend```
-```npm start```
+```cmd
+cd frontend
+```
+
+```cmd
+npm start
+```
 
 Make sure you run the Docker container first and then run the Frontend.
 Docker container will occupy the PORT 3000, hence while running the React script, it will ask permission to run on another port. Press `Y` when it asks.
